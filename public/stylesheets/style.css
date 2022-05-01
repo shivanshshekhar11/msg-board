@@ -1,0 +1,40 @@
+body {
+  padding: 50px;
+  font-family: monospace;
+  font-size: larger;
+  text-align: center;
+  color: white;
+  background: url(../images/msg-board-back.png) fixed;
+  background-size: 100% 100%;
+}
+
+li{
+  text-align: left;
+}
+
+ul{
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+a {
+  color:skyblue;
+}
+
+form{
+  margin-top: 5em;
+  margin-bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+div{
+  margin:auto;
+  margin-bottom: 4em;
+}
+
+button{
+  width: 5%;
+  margin:auto;
+}
