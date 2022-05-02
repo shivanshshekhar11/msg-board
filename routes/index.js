@@ -35,4 +35,31 @@ router.post('/new', function(req, res, next) {
   res.redirect('/');
 });
 
+router.get('/delete', function(req, res, next) {
+  res.render('delete', { title: "Delete Message"});
+});
+
+router.post('/delete', function(req, res, next) {
+  if(req.body.pass===""){
+    let flag = 0;
+    for(let i = 0; i<messages.length; i++){
+      if(messages[i].user===req.body.user){
+        messages.splice(i, 1);
+        flag = 1;
+      }
+    }
+
+    if(flag==0){
+      res.render('delete', { title: "Delete Message", error: "no user found"});
+    }
+    else{
+      res.redirect('/');
+    }
+  }
+
+  else{
+    res.render('delete', { title: "Delete Message", error: "wrong password"});
+  }
+});
+
 module.exports = router;

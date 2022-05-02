@@ -9,14 +9,14 @@
     <p>Welcome to <%= title %></p>
 
     <form method="POST" action="/new">
-        <div>
+        <div id="inputmsg">
           <label for="msg">Enter the message -</label>
-          <input id="msg" type="text" name="msg">
+          <textarea id="msg" type="text" name="msg" rows="5" cols="40" maxlength="500"></textarea>
         </div>
 
         <div>
           <label for="user">Enter your name -</label>
-          <input id="user" type="text" name="user">
+          <input id="user" type="text" name="user" maxlength="30">
         </div>
         <button>Submit</button>
     </form>

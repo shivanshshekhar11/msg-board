@@ -11,14 +11,15 @@
     <ul>
       <% for(var i=0; i < messages.length; i++) { %>
          <li>
-            <p id="msg"><%= messages[i].text %></p>
-            <p><%= messages[i].user %></p>
-            <p><%= messages[i].added %></p>
+            <p id="display"><%= messages[i].text %></p>
+            <p id="author"><%= messages[i].user %></p>
+            <p id="time"><%= messages[i].added %></p>
          </li>
       <% } %>
     </ul>
 
     <a href="/new">Enter a new message for the board ...</a>
+    <a href="/delete">Delete a message</a>
 
   </body>
 </html>

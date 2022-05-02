@@ -18,7 +18,9 @@ ul{
 }
 
 a {
-  color:skyblue;
+  color:coral;
+  display: block;
+  margin-bottom: 2em;
 }
 
 form{
@@ -37,4 +39,25 @@ div{
 button{
   width: 5%;
   margin:auto;
+}
+
+#author{
+  color:yellow;
+}
+
+#time{
+  color:aqua;
+}
+
+#inputmsg{
+  display: flex;
+  flex-direction: row;
+}
+
+textarea{
+  margin-left: 1.5em;
+}
+
+#error{
+  color:lightcoral;
 }
