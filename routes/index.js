@@ -4,19 +4,19 @@ var router = express.Router();
 var messages = [
   {
     text:"hello, how are you?",
-    user:"teena",
+    user:"user75",
     added: new Date()
   },
 
   {
     text:"I'm fine, how are you?",
-    user:"JD1024",
+    user:"user11",
     added: new Date()
   },
 
   {
     text:"what are you doing these days?",
-    user:"teena",
+    user:"user75",
     added: new Date()
   }
 ]
@@ -46,6 +46,7 @@ router.post('/delete', function(req, res, next) {
       if(messages[i].user===req.body.user){
         messages.splice(i, 1);
         flag = 1;
+        i--;
       }
     }
 
