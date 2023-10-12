@@ -10,17 +10,30 @@ body {
 
 li{
   text-align: left;
+  border: solid 1.5px white;
+  border-radius: 1em;
+  padding:1%;
+  width:50%;
+  margin: 2% 25% 0 25%;
+  background-color:rgba(0, 40, 104, 0.33);
 }
 
 ul{
   margin-top: 5em;
   margin-bottom: 5em;
+  list-style: none;
 }
 
 a {
   color:coral;
   display: block;
   margin-bottom: 2em;
+  border: solid 1.5px coral;
+  border-radius: 1em;
+  padding:1%;
+  width:30%;
+  margin: 2% 35% 0 35%;
+  background-color:rgba(0, 14, 46, 0.33);
 }
 
 form{
@@ -29,6 +42,12 @@ form{
   display: flex;
   flex-direction: column;
   text-align: left;
+  border: solid 1.5px white;
+  border-radius: 1em;
+  padding:1%;
+  width:50%;
+  margin: 2% 25% 0 25%;
+  background-color:rgba(0, 19, 50, 0.334);
 }
 
 div{
@@ -37,7 +56,7 @@ div{
 }
 
 button{
-  width: 5%;
+  width: 10%;
   margin:auto;
 }
 

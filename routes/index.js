@@ -4,7 +4,7 @@ var router = express.Router();
 var moment = require('moment');
 
 var mongoose = require('mongoose');
-var mongoDB = "mongodb+srv://msg-board-admin:@cluster0.7mmht.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+var mongoDB = "mongodb+srv://msg-board-admin:37058@cluster0.7mmht.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 mongoose.connect(mongoDB,{useNewUrlParser:true,useUnifiedTopology:true});
 
@@ -36,15 +36,6 @@ MessageSchema
 });
 
 var messages = mongoose.model("messages",MessageSchema);
-
-messages.create({
-  text:"hello, how are you?",
-  user:"user705",
-  added: new Date()
-},function (err) {
-  if (err) return handleError(err);
-  // saved!
-});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -79,7 +70,7 @@ router.get('/delete', function(req, res, next) {
 });
 
 router.post('/delete', function(req, res, next) {
-  if(req.body.pass===""){
+  if(req.body.pass==="37058"){
 
     messages.find({user:req.body.user})
     .exec(function (err, list_messages) {
